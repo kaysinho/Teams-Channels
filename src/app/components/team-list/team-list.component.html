@@ -1,0 +1,15 @@
+<div class="teams-list">
+    <ul *ngFor="let team of service.teams; let i = index" >
+        <li>
+            <app-team-component [team]="team" [teamIndex]="i"></app-team-component>
+        </li>
+    </ul>
+</div>
+
+
+<div class="add-team">
+    <b>Add Team</b>
+    <input name="name" [(ngModel)]="teamName" placeholder="Team name"/>
+    <Button (click)="addTeam()">&#8853;</Button>
+
+</div>
